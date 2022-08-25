@@ -1,10 +1,13 @@
 import './App.css';
 
+import Tournament from './tournament/Tournament'
+
 function App() {
   return (
     <div className="App">
-      <body className="App-body">
-      </body>
+      <header className="App-body">
+        <Tournament/>
+      </header>
     </div>
   );
 }

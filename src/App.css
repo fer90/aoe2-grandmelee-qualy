@@ -3,16 +3,23 @@
 }
 
 .App-body {
-  background-color: #282c34;
+  background-color: #2f7e92;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: rgb(255, 255, 255);
+  font-size: 25px
 }
 
 .App-link {
-  color: #61dafb;
+  color: #61fba1;
+}
+
+th, td {
+  border: 1px solid rgb(236, 235, 235);
+  white-space: nowrap;
+  padding: 0 15px;
+  align-items: center;
 }
