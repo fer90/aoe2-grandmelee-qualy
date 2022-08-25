@@ -24,6 +24,7 @@ export default class Brackets extends React.Component {
         }
         return (
             <table className="Brackets">
+            <tbody>
                 <tr>
                     <td>{bracketSections[0]}</td>
                     <td>{bracketSections[1]}</td>
@@ -33,6 +34,7 @@ export default class Brackets extends React.Component {
                     <td>{bracketSections[2]}</td>
                     <td>{bracketSections[3]}</td>
                 </tr>
+                </tbody>
             </table>
         );
     }

@@ -15,7 +15,6 @@ export default class Tournament extends React.Component {
     render() {
         let playersData = this._getPlayersDataOrderedByHighestElo();
         this._calculateFirstSeeds(playersData, Tournament.PLAYERS_AMOUNT);
-        console.log(playersData);
         return (
             <div>
                 <Brackets players={playersData} />

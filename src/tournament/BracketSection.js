@@ -9,9 +9,10 @@ export default class BracketSection extends React.Component {
         this.state = {
             singleBrackets: []
         }
+        this.calculateBrackets();
     }
 
-    render() {
+    calculateBrackets() {
         let players = this.props.players;
         let playersAlignments = this.props.playersAlignments;
         var singleBrackets = [];
@@ -29,6 +30,9 @@ export default class BracketSection extends React.Component {
             }
             this.setState({singleBrackets});
         });
+    }
+
+    render() {
         return (
             <div>
                 {this.state.singleBrackets[0]}
