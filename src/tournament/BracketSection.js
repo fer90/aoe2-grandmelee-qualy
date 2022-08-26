@@ -34,13 +34,11 @@ export default class BracketSection extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className='bracket' style={{ display: 'flex', flexDirection: 'column', gap: '16px', marginBottom: '32px', textAlign: 'left' }}>
+                <h2>Bracket #{this.props.number}</h2>
                 {this.state.singleBrackets[0]}
-                <br/>
                 {this.state.singleBrackets[1]}
-                <br/>
                 {this.state.singleBrackets[2]}
-                <br/>
                 {this.state.singleBrackets[3]}
             </div>
         );

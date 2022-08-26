@@ -12,30 +12,17 @@ export default class Brackets extends React.Component {
     ];
 
     render () {
-        let bracketSections = []; // Should be 4 sections, as there are 4 qualis
-        for (let i = 0; i < 4; i++) {
-            bracketSections.push(
-                <BracketSection
-                    key={i}
-                    playersAlignments={Brackets.bracketsAlignments[i]}
-                    players = {this.props.players}
-                />
-            )
-        }
         return (
-            <table className="Brackets">
-            <tbody>
-                <tr>
-                    <td>{bracketSections[0]}</td>
-                    <td>{bracketSections[1]}</td>
-                </tr>
-                <hr/>
-                <tr>
-                    <td>{bracketSections[2]}</td>
-                    <td>{bracketSections[3]}</td>
-                </tr>
-                </tbody>
-            </table>
+            <div style={{display: 'flex', flexDirection: 'column' }}>
+                {[0, 1, 2, 3].map((i) => (
+                    <BracketSection
+                        key={i}
+                        number={i + 1}
+                        playersAlignments={Brackets.bracketsAlignments[i]}
+                        players={this.props.players}
+                    />
+                ))}
+            </div>
         );
     }
 }
