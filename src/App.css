@@ -24,3 +24,7 @@ th, td {
   padding: 0 15px;
   align-items: center;
 }
+
+.text-red {
+  color: #db0a40;
+}

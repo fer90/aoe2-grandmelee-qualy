@@ -1,30 +1,30 @@
 import React from 'react';
 
 import BracketSection from './BracketSection.js';
+import { usePlayers } from './usePlayers';
 
-export default class Brackets extends React.Component {
+const BracketsAlignments = [
+  [1, 32, 16, 17, 8, 25, 9, 24],
+  [4, 29, 13, 20, 5, 28, 12, 21],
+  [2, 31, 15, 18, 7, 26, 10, 23],
+  [3, 30, 14, 19, 6, 27, 11, 22],
+];
 
-    static bracketsAlignments = [
-        [1, 32, 16, 17, 8, 25, 9, 24],
-        [4, 29, 13, 20, 5, 28, 12, 21],
-        [2, 31, 15, 18, 7, 26, 10, 23],
-        [3, 30, 14, 19, 6, 27, 11, 22]
-    ];
+export default function Brackets() {
+  const { data: players } = usePlayers();
 
-    render () {
-        return (
-            <div style={{display: 'flex', flexDirection: 'column' }}>
-                {[0, 1, 2, 3].map((i) => (
-                    <BracketSection
-                        key={i}
-                        number={i + 1}
-                        playersAlignments={Brackets.bracketsAlignments[i]}
-                        players={this.props.players}
-                    />
-                ))}
-            </div>
-        );
-    }
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column' }}>
+      {[0, 1, 2, 3].map((i) => (
+        <BracketSection
+          key={i}
+          number={i + 1}
+          playersAlignments={BracketsAlignments[i]}
+          players={players}
+        />
+      ))}
+    </div>
+  );
 }
 
 
