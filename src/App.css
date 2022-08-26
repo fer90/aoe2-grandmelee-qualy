@@ -1,9 +1,10 @@
 .App {
+  font-family: "Bull Text",Helvetica,sans-serif;
   text-align: center;
 }
 
 .App-body {
-  background-color: #2f7e92;
+  background-color: #00162b;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
