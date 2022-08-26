@@ -11,6 +11,7 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <div className="App">
         <header className="App-body">
+          <img loading="lazy" src="Red_Bull_Wololo_Legacy_logo.png" alt="Red Bull Wololo Legacy Logo" height="200" />
           <Tournament />
         </header>
       </div>
