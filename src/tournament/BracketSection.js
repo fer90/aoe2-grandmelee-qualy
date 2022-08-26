@@ -15,7 +15,7 @@ export default function BracketSection({ number, players, playersAlignments }) {
   }
 
   return (
-    <div className='bracket' style={{ display: 'flex', flexDirection: 'column', gap: '16px', marginBottom: '32px', textAlign: 'left' }}>
+    <div className='bracket' style={{ display: 'flex', marginRight: '20px', flexDirection: 'column', gap: '16px', marginBottom: '32px', textAlign: 'left' }}>
       <h2>Bracket #{number}</h2>
       {singleBrackets}
     </div>

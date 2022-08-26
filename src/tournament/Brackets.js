@@ -14,7 +14,7 @@ export default function Brackets() {
   const { data: players } = usePlayers();
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column' }}>
+    <div style={{ display: 'flex', flexDirection: 'row' }}>
       {[0, 1, 2, 3].map((i) => (
         <BracketSection
           key={i}
