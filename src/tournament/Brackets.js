@@ -5,9 +5,9 @@ import { usePlayers } from './usePlayers';
 
 const BracketsAlignments = [
   [1, 32, 16, 17, 8, 25, 9, 24],
-  [4, 29, 13, 20, 5, 28, 12, 21],
   [2, 31, 15, 18, 7, 26, 10, 23],
   [3, 30, 14, 19, 6, 27, 11, 22],
+  [4, 29, 13, 20, 5, 28, 12, 21],
 ];
 
 export default function Brackets() {
