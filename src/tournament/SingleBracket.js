@@ -9,7 +9,7 @@ export default class SingleBracket extends React.Component {
                 <tbody>
                     <tr>
                         <td>
-                            {this.props.playerOnePosition}. {this.props.playerOne.name} ({this.props.playerOne.highest_rating} - [{this.props.playerOne.rating}])<br/>{this.props.playerTwoPosition}. {this.props.playerTwo.name} ({this.props.playerTwo.highest_rating} - [{this.props.playerTwo.rating}])
+                            {this.props.playerOnePosition}. <b>{this.props.playerOne.name}</b> (<b>{this.props.playerOne.highest_rating}</b> - [{this.props.playerOne.rating}])<br/>{this.props.playerTwoPosition}. <b>{this.props.playerTwo.name}</b> (<b>{this.props.playerTwo.highest_rating}</b> - [{this.props.playerTwo.rating}])
                         </td>
                     </tr>
                     </tbody>

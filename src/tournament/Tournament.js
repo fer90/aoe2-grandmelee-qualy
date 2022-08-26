@@ -20,7 +20,8 @@ export default class Tournament extends React.Component {
                 <ul>
                     <li>Untie criteria: Current ELO (This is an assumption as I couldn't find it in the handbook)</li>
                 </ul>
-
+                <p>Format: SeedPosition. PlayerName (Highest ELO - [Current ELO])</p>
+                <p>Note: The chinese name is Vivi :P</p>
                 <Brackets players={playersData} />
             </div>
         );
