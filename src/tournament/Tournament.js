@@ -17,6 +17,10 @@ export default class Tournament extends React.Component {
         this._calculateFirstSeeds(playersData, Tournament.PLAYERS_AMOUNT);
         return (
             <div>
+                <ul>
+                    <li>Untie criteria: Current ELO (This is an assumption as I couldn't find it in the handbook)</li>
+                </ul>
+
                 <Brackets players={playersData} />
             </div>
         );
