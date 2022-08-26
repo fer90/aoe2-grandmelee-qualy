@@ -24,7 +24,7 @@ export default class Tournament extends React.Component {
 
     async _getPlayersDataOrderedByHighestElo() {
         let playersData = await this.playersDatasource.getEmpireWarsPlayersData();
-        playersData.sort((a, b) => (b.highest_rating === a.highest_rating) ? b.rating === a.rating : b.highest_rating - a.highest_rating);
+        playersData.sort((a, b) => (b.highest_rating === a.highest_rating) ? b.rating - a.rating : b.highest_rating - a.highest_rating);
         return playersData;
     }
 
