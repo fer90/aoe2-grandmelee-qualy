@@ -1,43 +1,30 @@
 import React from 'react';
 
 import BracketSection from './BracketSection.js';
+import { usePlayers } from './usePlayers';
 
-export default class Brackets extends React.Component {
+const BracketsAlignments = [
+  [1, 32, 16, 17, 8, 25, 9, 24],
+  [4, 29, 13, 20, 5, 28, 12, 21],
+  [2, 31, 15, 18, 7, 26, 10, 23],
+  [3, 30, 14, 19, 6, 27, 11, 22],
+];
 
-    static bracketsAlignments = [
-        [1, 32, 16, 17, 8, 25, 9, 24],
-        [4, 29, 13, 20, 5, 28, 12, 21],
-        [2, 31, 15, 18, 7, 26, 10, 23],
-        [3, 30, 14, 19, 6, 27, 11, 22]
-    ];
+export default function Brackets() {
+  const { data: players } = usePlayers();
 
-    render () {
-        let bracketSections = []; // Should be 4 sections, as there are 4 qualis
-        for (let i = 0; i < 4; i++) {
-            bracketSections.push(
-                <BracketSection
-                    key={i}
-                    playersAlignments={Brackets.bracketsAlignments[i]}
-                    players = {this.props.players}
-                />
-            )
-        }
-        return (
-            <table className="Brackets">
-            <tbody>
-                <tr>
-                    <td>{bracketSections[0]}</td>
-                    <td>{bracketSections[1]}</td>
-                </tr>
-                <hr/>
-                <tr>
-                    <td>{bracketSections[2]}</td>
-                    <td>{bracketSections[3]}</td>
-                </tr>
-                </tbody>
-            </table>
-        );
-    }
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column' }}>
+      {[0, 1, 2, 3].map((i) => (
+        <BracketSection
+          key={i}
+          number={i + 1}
+          playersAlignments={BracketsAlignments[i]}
+          players={players}
+        />
+      ))}
+    </div>
+  );
 }
 
 
